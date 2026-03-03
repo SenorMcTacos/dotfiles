@@ -1,0 +1,97 @@
+Rice Notes
+
+Hyprland
+A compositor and window manager
+
+UWSM (Universal Wayland Session Manager)
+Provides a cleaner exit out of the environment, by wrapping everything together
+Requries the user to start processes with uwsm app --, which places apps in "slices"
+These slices are then closed and managed by uwsm
+3 slices, background, app, Session
+background are low priority, session are high priority bg interactables, and app is main applications (firefox, games)
+uwsm app -s (a|b|s) -- (app) # this is how you start stuff
+systemctl --user enable (app) is used over uwsm 
+ALSO NEED TO MOVE environment variable definitions in hyprland -> /uwsm/env
+ALL EXPORTS ARE IN THE ENV FILE,  ~/.config/uwsm/env-hyprland and ~/.config/uwsm/env 
+
+Waybar
+Needed to download a nerd font for icons to have icons
+Need to integrate with hyprland, replace sway stuff with hyprland
+
+Brightnessctl
+Needed to control brightness on laptop w/ Hyprland
+
+BlueDevil
+For bluetooth, needed bluez to work
+Still need to connect to waybar
+
+Evtest/Wev
+See keyboard input mainly, but can see input of all devices, like mic and stuff
+Wev gives actually keys hyprland likes
+
+Bluez
+Bluetooth Service
+Needed to turn on experimental settings to see bluetooth device battery
+This is done by editing /etc/bluetooth/main.conf. 
+Not having this enabled will cause a crash in waybar, due to it seeking battery for BT.
+
+Nm-Connection-Editor
+Handles wifi connections, instead of using nmcli or nmtui
+Could potentially find a better visual GUI for wifi, but this is a good basic
+
+Pipewire-Alsa
+needed to install this for spotify to work for some reason
+
+Pavucontrol
+Installed in order to make waybar audio control work
+Also required an install of pipewire-pulse for a connection
+
+archlinux-xdg-menu
+used to fix dolphin not having default apps options
+
+Grim + Slurp + swappy
+Used to take screenshots of the desktop
+
+Hyprpaper
+using hyprpaper to handle backgrounds, inside the hypr folder
+
+Fuse2
+Needed for appimages
+
+glu
+Needed for Davinci REsolve
+
+tlp
+Needed for battery charge limiting
+Make changes by editing /etc/tlp.conf
+also neeed systemctl enable tlp.service
+
+Fixing Wifi problems
+https://wiki.archlinux.org/title/Wpa_supplicant#Roaming
+Section 5.4, i had to create a wpa_supplicant.conf file with the roaming setup in a certain way to fix slow wifi speeds.
+I assume it wouldn't roam to find better connections, so this makes it more aggressive, and actually roam.
+
+OK I THINK THESE WERE THE FIXES OR MAYBE ITS A COMBO
+https://www.reddit.com/r/Fedora/comments/1giabef/fix_for_mediatek_mt7922_that_worked_for_me/?chainedPosts=t3_1n17dhs 
+
+ALSO TO DISABLE POWER SAVING FOR WIFI CARD
+Recommended Method (NetworkManager)
+If you are using NetworkManager (common in Ubuntu, Mint, Fedora, etc.), the most reliable method is to create or modify a configuration file: 
+
+    Open or create the file /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf using a text editor with root privileges:
+    bash
+
+sudo nano /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf
+
+Add or modify the following lines:
+ini
+
+[connection]
+wifi.powersave = 2
+
+(Value 2 means disable, 3 means enable).
+Save the file and exit the editor.
+Restart NetworkManager for the changes to take effect:
+bash
+
+sudo systemctl restart NetworkManager

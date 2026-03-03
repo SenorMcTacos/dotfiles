@@ -1,0 +1,10 @@
+export XCURSOR_SIZE = 24
+export HYPRCURSOR_SIZE = 24
+# export LIBVA_DRIVER_NAME = nvidia # nvidia only
+# export __GLX_VENDOR_LIBRARY_NAME = nvidia  # nvidia only
+export XDG_MENU_PREFIX=arch- kbuildsycoca6 --noincremental
+export XDG_CURRENT_DESKTOP = Hyprland # hyprland stream
+export XDG_SESSION_TYPE = wayland # hyprland stream
+export XDG_SESSION_DESKTOP = Hyprland # hyprland stream
+export GIT_EDITOR = nano
+export BROWSER = /usr/bin/firefox
