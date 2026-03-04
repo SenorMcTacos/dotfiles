@@ -1,0 +1,2 @@
+Delete Terminal Images/Icons
+Go to fastfetch in .config and delete files
