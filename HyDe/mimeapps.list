@@ -1,0 +1,14 @@
+[Added Associations]
+text/markdown=code.desktop;
+text/plain=code.desktop;
+text/x-python=code.desktop;
+
+[Default Applications]
+text/markdown=code.desktop;
+text/plain=code.desktop;
+text/x-python=code.desktop;
+x-scheme-handler/discord-1216669957799018608=discord-1216669957799018608.desktop
+x-scheme-handler/sc-1a7cf737934c7675=/home/SenorTaco/.local/share/applications/connectwisecontrol-1a7cf737934c7675.desktop
+inode/directory=org.kde.dolphin.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop

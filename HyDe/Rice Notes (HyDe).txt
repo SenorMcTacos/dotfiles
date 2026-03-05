@@ -1,2 +1,12 @@
 Delete Terminal Images/Icons
 Go to fastfetch in .config and delete files
+
+Make Firefox Default Browser
+Change mimeapps.list
+Added:
+    x-scheme-handler/http=firefox.desktop
+    x-scheme-handler/https=firefox.desktop
+
+Add Battery Level to hyprlock
+Created scirpt that goes to BAT1 (can be BAT0 dependent on system) and gets battery Level
+Added to HyDE conf a query using script every 10 seconds
