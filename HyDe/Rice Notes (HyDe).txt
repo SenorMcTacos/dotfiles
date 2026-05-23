@@ -10,3 +10,18 @@ Added:
 Add Battery Level to hyprlock
 Created scirpt that goes to BAT1 (can be BAT0 dependent on system) and gets battery Level
 Added to HyDE conf a query using script every 10 seconds
+
+tlp
+Needed for battery charge limiting, need to pacman
+Make changes by editing /etc/tlp.conf
+START_CHARGE_THRESH_BAT0=75
+STOP_CHARGE_THRESH_BAT0=80
+Check for BAT0 and BAT1
+also neeed systemctl enable tlp.service
+need to run sudo tlp start to enable changes
+
+Monitor + USB Doc at school not working
+https://wiki.archlinux.org/title/Thunderbolt
+    Under Section 2.2
+NEVERMIND TURNS OUT IT WAS BECAUSE I WASN'T PLUGGING IT INTO THE RIGHT PORT.  NEED TO PLUG INTO USB3.1 PORT!
+The one that says 40GPbs is a good clue :/
