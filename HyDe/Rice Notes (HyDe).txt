@@ -10,3 +10,15 @@ Added:
 Add Battery Level to hyprlock
 Created scirpt that goes to BAT1 (can be BAT0 dependent on system) and gets battery Level
 Added to HyDE conf a query using script every 10 seconds
+
+Wake-On-Lan (WOL)
+run command 'ip a' to see available interfaces
+then sudo ethtool (interface_name)
+Looking for
+    Supports Wake-on: g
+    Wake-on: d
+g stands for magic packet capable, d is disabled
+Then enable it with
+nmcli connection modify "YOUR_CONNECTION_NAME" 802-3-ethernet.wake-on-lan magic
+rerun sudo ethtool blah blah
+should say: wake-on: g
