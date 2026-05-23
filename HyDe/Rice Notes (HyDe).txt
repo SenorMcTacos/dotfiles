@@ -25,3 +25,14 @@ https://wiki.archlinux.org/title/Thunderbolt
     Under Section 2.2
 NEVERMIND TURNS OUT IT WAS BECAUSE I WASN'T PLUGGING IT INTO THE RIGHT PORT.  NEED TO PLUG INTO USB3.1 PORT!
 The one that says 40GPbs is a good clue :/
+Wake-On-Lan (WOL)
+run command 'ip a' to see available interfaces
+then sudo ethtool (interface_name)
+Looking for
+    Supports Wake-on: g
+    Wake-on: d
+g stands for magic packet capable, d is disabled
+Then enable it with
+nmcli connection modify "YOUR_CONNECTION_NAME" 802-3-ethernet.wake-on-lan magic
+rerun sudo ethtool blah blah
+should say: wake-on: g
