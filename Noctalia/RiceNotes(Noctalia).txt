@@ -7,4 +7,15 @@ https://github.com/ValveSoftware/Proton/wiki/Using-a-NTFS-disk-with-Linux-and-Wi
 Scroll to the bottom where it mention NTFS Read Errors
 Need to create a symlink of compatdata so that games that have : in it don't break
 
+Mouse fix for steam controller
+https://github.com/Supreeeme/extest
+Download zip, run with rust command
+Add user to input group
+Change steam .desktop to execute with the LD preload
+Also, need to go to steam big picture mode, go to Display > Disable Gpu Blocklist under advanced
 
+Enable Tailscale
+Download ts
+sudo systemctl enable --now tailscaled
+sudo tailscale up
+If needed for moonlight, grab IP from admin console on tailscale and enter manually
