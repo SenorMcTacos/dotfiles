@@ -1,0 +1,3 @@
+Symlink Creation
+command:
+ln -s ~/Things/dotfiles/Noctalia/folder_name ~/.config/folder_name
