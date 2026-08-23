@@ -1,0 +1,50 @@
+NeoTree Quick Guide
+h, j, k, l: Move the cursor left, down, up, and right, respectively.
+w: Move the cursor to the beginning of the next word.
+b: Move the cursor to the beginning of the previous word.
+e: Move the cursor to the end of the current word.
+gg: Move the cursor to the beginning of the file.
+G: Move the cursor to the end of the file.
+0: move to beginning of line
+$: move to end of the line
+^: move to beginning of line, but skip indentation
+{number}G: Move the cursor to the specified line number.
+:{line number}k: Move the cursor UP to the specified line number.
+:{line number}j: Move cursor DOWN to the specified line number.
+
+i: insert (left)
+a: insert after cursor position (right)
+o: insert new line below and enter type
+O: insert new line above and enter type
+r: replace character under cursor
+R: enter replace mode
+x: delete character under cursor
+X: delete character before cursor
+d{motion (e, w)}: delete based on motion
+dd: delete current line
+
+v: visual mode
+V: visual line mode
+
+u: undo
+CTRL + r: redo
+/{pattern}: search for word
+    n: jump to next
+    N: jump to previous
+Saving and quitting
+:w or CTRL + s: Save the current file.
+:w {file}: Save the current file as the specified file.
+:wq: Save and quit.
+:q: Quit.
+:q!: Quit without saving
+
+yy: copy current line
+{Visual mode}y: copy current line
+p: paste after cursor (right)
+P: paste before cursor (left)
+
+Windows:
+{leader} + w + s: horizontal split
+{leader} + w + v: vertical split
+CTRL + left_arrow: move windows left and right (for split windows)
+CTRL + right_arrow: move windows right (for split windows)
