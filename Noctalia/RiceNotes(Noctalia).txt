@@ -1,3 +1,10 @@
 Symlink Creation
 command:
 ln -s ~/Things/dotfiles/Noctalia/folder_name ~/.config/folder_name
+
+Steam Dual Boot File Fix
+https://github.com/ValveSoftware/Proton/wiki/Using-a-NTFS-disk-with-Linux-and-Windows
+Scroll to the bottom where it mention NTFS Read Errors
+Need to create a symlink of compatdata so that games that have : in it don't break
+
+
