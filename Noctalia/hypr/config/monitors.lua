@@ -8,8 +8,14 @@
 -- })
 
 hl.monitor({
-    output    = MONITOR1,
-    mode      = "preferred",
-    position  = "auto",
-    scale     = "auto",
+	output = MONITOR1,
+	mode = "preferred",
+	position = "0x0",
+	scale = "auto",
+})
+
+hl.monitor({
+	output = "DP-3",
+	mode = "1920x1080@165",
+	position = "1920x0",
 })
