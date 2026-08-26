@@ -5,6 +5,7 @@ capsule = false
 center = [ "spacer_2", "workspaces", "spacer_1", "active_window" ]
 color = "primary"
 icon_color = "primary"
+start = [ "launcher", "clock", "spacer_1", "group:g1" ]
 
     [[bar.default.capsule_group]]
     accordion = false
@@ -219,18 +220,29 @@ path = "/usr/share/noctalia/assets/noctalia-wallpaper.png"
 unit = "imperial"
 
 [widget.active_window]
-max_length = 160
+max_length = 180
+title_scroll = "on_hover"
 
 [widget.battery]
 display_mode = "graphic"
 
 [widget.clock]
 color = "primary"
+scale = 0.90000000000000002
+
+[widget.media]
+max_length = 190
+title_scroll = "always"
 
 [widget.network]
 color = "primary"
 
+[widget.spacer_1]
+length = 10
+
 [widget.spacer_2]
+enabled = true
+length = 10
 type = "spacer"
 
 [widget.sysmon_2]
@@ -241,6 +253,9 @@ visualization = "graph"
 
 [widget.temp]
 show_value = true
+
+[widget.tray]
+scale = 1.0
 
 [widget.volume]
 color = "primary"
