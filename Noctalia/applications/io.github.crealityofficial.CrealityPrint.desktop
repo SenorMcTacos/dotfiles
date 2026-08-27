@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=CrealityPrint
+GenericName=3D Printing Software
+Icon=io.github.crealityofficial.CrealityPrint
+Exec=/usr/bin/flatpak run --branch=master --arch=x86_64 --command=entrypoint --file-forwarding io.github.crealityofficial.CrealityPrint @@u %U @@
+Terminal=false
+Type=Application
+MimeType=model/stl;model/3mf;application/vnd.ms-3mfdocument;application/prs.wavefront-obj;application/x-amf;x-scheme-handler/crealityprintlink;
+Categories=Graphics;Utility;3DGraphics;Engineering;
+Keywords=3D;Printing;Slicer;slice;3D;printer;convert;gcode;stl;obj;amf;SLA
+StartupNotify=false
+StartupWMClass=CrealityPrint
+X-Flatpak=io.github.crealityofficial.CrealityPrint
