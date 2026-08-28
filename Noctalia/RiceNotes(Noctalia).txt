@@ -27,3 +27,25 @@ Users who just want to connect any device without any sort of manual work can cr
 
 ACTION=="add", SUBSYSTEM=="thunderbolt", ATTR{authorized}=="0", ATTR{authorized}="1"
 
+Godot LSP on Nvim
+https://jackharrington.bearblog.dev/lazyvim-nvim-godot/
+Lovely guide
+also had to change godot settings to use spaces instead of tabs
+take a look at nvim for godot_conf and godot.lua to see my special version that simply starts the pipe server
+    when it detects the directory moves to where a project.godot is located at
+Also had to add this to configure the lsp of lazyvim located inside of the godot.lua plugin
+return {
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        gdscript = {
+          name = "godot",
+          cmd = vim.lsp.rpc.connect("127.0.0.1", 6005),
+          filetypes = { "gdscript" },
+          root_markers = { "project.godot", ".git" },
+        },
+      },
+    },
+  },
+}
