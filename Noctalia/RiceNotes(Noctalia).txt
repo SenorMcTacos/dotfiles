@@ -19,3 +19,14 @@ Download ts
 sudo systemctl enable --now tailscaled
 sudo tailscale up
 If needed for moonlight, grab IP from admin console on tailscale and enter manually
+
+Allowing Thunderbolt devices
+Users who just want to connect any device without any sort of manual work can create a udev rule as in 99-removable.rules:
+
+/etc/udev/rules.d/99-removable.rules
+
+ACTION=="add", SUBSYSTEM=="thunderbolt", ATTR{authorized}=="0", ATTR{authorized}="1"
+
+Use Nvim to edit sudo files
+Set Neovim as your default editor in your shell configuration file (like ~/.bashrc or ~/.zshrc):bashexport EDITOR="nvim"
+export SUDO_EDITOR="nvim"

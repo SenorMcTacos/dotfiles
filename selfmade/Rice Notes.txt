@@ -84,8 +84,6 @@ If you are using NetworkManager (common in Ubuntu, Mint, Fedora, etc.), the most
 sudo nano /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf
 
 Add or modify the following lines:
-ini
-
 [connection]
 wifi.powersave = 2
 
