@@ -27,6 +27,3 @@ Users who just want to connect any device without any sort of manual work can cr
 
 ACTION=="add", SUBSYSTEM=="thunderbolt", ATTR{authorized}=="0", ATTR{authorized}="1"
 
-Use Nvim to edit sudo files
-Set Neovim as your default editor in your shell configuration file (like ~/.bashrc or ~/.zshrc):bashexport EDITOR="nvim"
-export SUDO_EDITOR="nvim"

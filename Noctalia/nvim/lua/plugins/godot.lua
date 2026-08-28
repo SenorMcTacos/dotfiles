@@ -1,11 +1,21 @@
 return {
+  { "habamax/vim-godot" },
+  { "skywind3000/asyncrun.vim" },
+  { "teatek/gdscript-extended-lsp.nvim", opts = { view_type = "floating", picker = "snacks" } },
   {
-    "neovim/nvim-lspconfig",
+    "folke/snacks.nvim",
     opts = {
-      inlay_hints = { enabled = false },
-      servers = {
-        gdscript = {},
-        gdshader_lsp = {},
+      picker = {
+        sources = {
+          explorer = {
+            hidden = true, -- show hidden files
+            ignored = false, -- don't show gitignored files
+            exclude = { -- exclude specific patterns
+              "*.uid", -- glob pattern for files ending with .uid
+              "server.pipe", -- exact filename match
+            },
+          },
+        },
       },
     },
   },
