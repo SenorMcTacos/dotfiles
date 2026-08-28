@@ -1,5 +1,10 @@
 return {
-  { "habamax/vim-godot" },
+  {
+    "habamax/vim-godot",
+    init = function()
+      vim.g.godot_executable = "godot"
+    end,
+  },
   { "skywind3000/asyncrun.vim" },
   { "teatek/gdscript-extended-lsp.nvim", opts = { view_type = "floating", picker = "snacks" } },
   {

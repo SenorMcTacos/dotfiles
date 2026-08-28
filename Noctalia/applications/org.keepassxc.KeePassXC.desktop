@@ -35,7 +35,7 @@ Comment=Community-driven port of the Windows application “KeePass Password Saf
 Comment[da]=Fællesskabsdrevet port af Windows-programmet “KeePass Password Safe”
 Comment[et]=Kogukonna arendatav port Windowsi programmist KeePass Password Safe
 Comment[ru]=Разработанный сообществом порт Windows-приложения KeePass Password Safe
-Exec=env QT_SCALE_FACTOR=2 keepassxc %f
+Exec=uwsm app -- env QT_SCALE_FACTOR=2 keepassxc %f
 TryExec=keepassxc
 Icon=keepassxc
 StartupWMClass=keepassxc

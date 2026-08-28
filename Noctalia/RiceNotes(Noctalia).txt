@@ -49,3 +49,4 @@ return {
     },
   },
 }
+Finally, needed to add the godot folder to PATH using fish_add_path /folder_with_godot/ , as well as rename godot executable to just godot(since fish is the shell used)
