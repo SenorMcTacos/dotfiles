@@ -11,14 +11,14 @@
 hl.monitor({
 	output = "DP-3",
 	mode = "1920x1080@165",
-	position = "1920x0",
+	position = "0x0",
 })
 
 -- Home PC Side Monitor
 hl.monitor({
 	output = "HDMI-A-1",
 	mode = "1920x1080@60",
-	position = "0x0",
+	position = "-1920x0",
 })
 
 -- Laptop setup
