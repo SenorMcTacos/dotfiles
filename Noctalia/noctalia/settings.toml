@@ -354,4 +354,8 @@ color = "primary"
 [widget.workspaces]
 empty_color = "on_surface_variant"
 show_labels = true
+<<<<<<< HEAD
 style = "minimal"
+=======
+style = "minimal"
+>>>>>>> main

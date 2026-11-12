@@ -1,0 +1,52 @@
+Symlink Creation
+command:
+ln -s ~/Things/dotfiles/Noctalia/folder_name ~/.config/folder_name
+
+Steam Dual Boot File Fix
+https://github.com/ValveSoftware/Proton/wiki/Using-a-NTFS-disk-with-Linux-and-Windows
+Scroll to the bottom where it mention NTFS Read Errors
+Need to create a symlink of compatdata so that games that have : in it don't break
+
+Mouse fix for steam controller
+https://github.com/Supreeeme/extest
+Download zip, run with rust command
+Add user to input group
+Change steam .desktop to execute with the LD preload
+Also, need to go to steam big picture mode, go to Display > Disable Gpu Blocklist under advanced
+
+Enable Tailscale
+Download ts
+sudo systemctl enable --now tailscaled
+sudo tailscale up
+If needed for moonlight, grab IP from admin console on tailscale and enter manually
+
+Allowing Thunderbolt devices
+Users who just want to connect any device without any sort of manual work can create a udev rule as in 99-removable.rules:
+
+/etc/udev/rules.d/99-removable.rules
+
+ACTION=="add", SUBSYSTEM=="thunderbolt", ATTR{authorized}=="0", ATTR{authorized}="1"
+
+Godot LSP on Nvim
+https://jackharrington.bearblog.dev/lazyvim-nvim-godot/
+Lovely guide
+also had to change godot settings to use spaces instead of tabs
+take a look at nvim for godot_conf and godot.lua to see my special version that simply starts the pipe server
+    when it detects the directory moves to where a project.godot is located at
+Also had to add this to configure the lsp of lazyvim located inside of the godot.lua plugin
+return {
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        gdscript = {
+          name = "godot",
+          cmd = vim.lsp.rpc.connect("127.0.0.1", 6005),
+          filetypes = { "gdscript" },
+          root_markers = { "project.godot", ".git" },
+        },
+      },
+    },
+  },
+}
+Finally, needed to add the godot folder to PATH using fish_add_path /folder_with_godot/ , as well as rename godot executable to just godot(since fish is the shell used)
