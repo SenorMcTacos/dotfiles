@@ -1,13 +1,52 @@
 local mainMod = "SUPER"
+local altMod = "CTRL + ALT" -- Laptop version
 local noctCall = "noctalia msg "
 local launchPrefix = "uwsm app -- " -- if you are not using UWSM, make this empty (e.g. "")
+
+-------------------------------
+---- WORKSPACES & MONITORS ----
+-------------------------------
+
+-- Focus on workspace number
+-- Absolute
+for i = 1, NUM_WPM do
+	local key = i % 10
+	hl.bind(mainMod .. " + ALT + " .. key, hl.dsp.focus({ workspace = i }))
+	hl.bind(altMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
+end
+-- Relative
+for i = 1, NUM_WPM do
+	local key = i % 10
+	hl.bind(mainMod .. " + CONTROL + " .. key, hl.dsp.focus({ workspace = "m~" .. i }))
+end
+
+-- Move to adjacent workspaces and next empty on a given monitor
+hl.bind(mainMod .. " + CONTROL + Right", hl.dsp.focus({ workspace = "r+1" }))
+hl.bind(mainMod .. " + CONTROL + Left", hl.dsp.focus({ workspace = "r-1" }))
+hl.bind(mainMod .. " + CONTROL + Down", hl.dsp.focus({ workspace = "emptym" }))
+hl.bind(altMod .. " + CONTROL + Right", hl.dsp.focus({ workspace = "r+1" }))
+hl.bind(altMod .. " + CONTROL + Left", hl.dsp.focus({ workspace = "r-1" }))
+hl.bind(altMod .. " + CONTROL + Down", hl.dsp.focus({ workspace = "emptym" }))
+
+-- Scroll through existing workspaces & monitors
+hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "m-1" }))
+hl.bind(altMod .. " + mouse_down", hl.dsp.focus({ workspace = "m-1" }))
+hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "m+1" }))
+hl.bind(altMod .. " + mouse_up", hl.dsp.focus({ workspace = "m+1" }))
+hl.bind(mainMod .. " + CONTROL + mouse_up", hl.dsp.focus({ workspace = "m-1" }))
+hl.bind(mainMod .. " + CONTROL + mouse_down", hl.dsp.focus({ workspace = "m+1" }))
+
+-- Special workspace (scratchpad)
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special" }))
+hl.bind(altMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special" }))
+hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special())
+hl.bind(altMod .. " + S", hl.dsp.workspace.toggle_special())
 
 ---------------------------
 ---- WINDOW MANAGEMENT ----
 ---------------------------
 
 -- Window manipulation
-local altMod = "CTRL + ALT"
 hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("hyprctl kill"))
 hl.bind(altMod .. " + Escape", hl.dsp.exec_cmd("hyprctl kill"))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
@@ -47,6 +86,7 @@ hl.bind(altMod .. " + SHIFT + Down", hl.dsp.window.move({ direction = "d" }))
 -- Move to workspace or move window to workspace key
 for i = 1, 9 do
 	for _, mod in ipairs({ mainMod, altMod }) do
+		--for _, mod in ipairs({ mainMod }) do
 		hl.bind(mod .. " + " .. i, hl.dsp.focus({ workspace = i }))
 		hl.bind(mod .. " + SHIFT + " .. i, hl.dsp.window.move({ workspace = i }))
 	end
@@ -152,34 +192,3 @@ hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(noctCall .. "panel-toggle clipboard")
 
 -- Notifications
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(noctCall .. "panel-toggle control-center notifications"))
-
--------------------------------
----- WORKSPACES & MONITORS ----
--------------------------------
-
--- Focus on workspace number
--- Absolute
-for i = 1, NUM_WPM do
-	local key = i % 10
-	hl.bind(mainMod .. " + ALT + " .. key, hl.dsp.focus({ workspace = i }))
-end
--- Relative
-for i = 1, NUM_WPM do
-	local key = i % 10
-	hl.bind(mainMod .. " + CONTROL + " .. key, hl.dsp.focus({ workspace = "m~" .. i }))
-end
-
--- Move to adjacent workspaces and next empty on a given monitor
-hl.bind(mainMod .. " + CONTROL + Right", hl.dsp.focus({ workspace = "r+1" }))
-hl.bind(mainMod .. " + CONTROL + Left", hl.dsp.focus({ workspace = "r-1" }))
-hl.bind(mainMod .. " + CONTROL + Down", hl.dsp.focus({ workspace = "emptym" }))
-
--- Scroll through existing workspaces & monitors
-hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "m-1" }))
-hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "m+1" }))
-hl.bind(mainMod .. " + CONTROL + mouse_up", hl.dsp.focus({ workspace = "m-1" }))
-hl.bind(mainMod .. " + CONTROL + mouse_down", hl.dsp.focus({ workspace = "m+1" }))
-
--- Special workspace (scratchpad)
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special" }))
-hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special())
