@@ -1,20 +1,288 @@
 config_version = 16
 
+<<<<<<< HEAD
 [lockscreen_widgets]
 enabled = false
 schema_version = 2
 widget_order = [ "lockscreen-login-box@eDP-1" ]
+=======
+[bar.default]
+capsule = false
+center = [ "spacer_2", "workspaces", "spacer_1", "active_window" ]
+color = "primary"
+icon_color = "primary"
+start = [ "launcher", "clock", "spacer_1", "group:g1" ]
+
+    [[bar.default.capsule_group]]
+    accordion = false
+    accordion_direction = "end"
+    border = ""
+    enabled = true
+    fill = "on_secondary"
+    id = "g1"
+    members = [ "temp", "sysmon_2", "sysmon_3", "battery" ]
+    opacity = 1.0
+    padding = 6.0
+
+[battery]
+warning_threshold = 25
+
+[desktop_widgets]
+schema_version = 2
+widget_order = [ "desktop-widget-0000000000000001", "desktop-widget-0000000000000002" ]
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000001]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 800.00006103515625
+    cy = 558.4000244140625
+    output = "eDP-1"
+    placement_height = 1000.0
+    placement_width = 1600.0
+    rotation = 0.0
+    type = "audio_visualizer"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000001.settings]
+        bands = 32
+        show_when_idle = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000002]
+    box_height = 160.0
+    box_width = 400.0
+    cx = 800.00006103515625
+    cy = 404.0
+    output = "eDP-1"
+    placement_height = 1000.0
+    placement_width = 1600.0
+    rotation = -0.0
+    type = "media_player"
+
+[idle]
+behavior_order = [ "screen-off", "lock", "lock-and-suspend" ]
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 480.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = true
+    timeout = 600.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 180.0
+
+[location]
+auto_locate = true
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [
+    "lockscreen-login-box@DP-11",
+    "lockscreen-login-box@DP-5",
+    "lockscreen-login-box@DP-4",
+    "lockscreen-login-box@DP-10",
+    "lockscreen-login-box@DP-3",
+    "lockscreen-login-box@HDMI-A-1",
+    "lockscreen-login-box@eDP-1"
+]
+>>>>>>> main
 
     [lockscreen_widgets.grid]
     cell_size = 16
     major_interval = 4
     visible = true
 
+<<<<<<< HEAD
     [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
     box_height = 196.0
     box_width = 810.0
     cx = 800.0
     cy = 818.0
+=======
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-10"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 1024.0
+    cy = 1006.4000244140625
+    output = "DP-10"
+    placement_height = 1152.0
+    placement_width = 2048.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-10".settings]
+        background_color = "surface_container"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_password_reveal = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-11"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 1280.0
+    cy = 1197.3333740234375
+    output = "DP-11"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-11".settings]
+        background_color = "surface_container"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_password_reveal = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-3"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "DP-3"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-3".settings]
+        background_color = "surface_container"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_password_reveal = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-4"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 1280.0
+    cy = 1197.3333740234375
+    output = "DP-4"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-4".settings]
+        background_color = "surface_container"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_password_reveal = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-5"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 1280.0
+    cy = 1197.3333740234375
+    output = "DP-5"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-5".settings]
+        background_color = "surface_container"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_password_reveal = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
+        background_color = "surface_container"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_password_reveal = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 800.00006103515625
+    cy = 818.00006103515625
+>>>>>>> main
     output = "eDP-1"
     placement_height = 1000.0
     placement_width = 1600.0
@@ -36,4 +304,73 @@ widget_order = [ "lockscreen-login-box@eDP-1" ]
         show_password_reveal = true
         show_session_buttons = true
         show_unlock_hint = true
+<<<<<<< HEAD
         show_weather = true
+=======
+        show_weather = true
+
+[shell]
+font_family = "MesloLGL Nerd Font Mono"
+
+[theme]
+builtin = "Noctalia"
+community_palette = "Catppuccin Macchiato Pink"
+pure_black_dark = true
+source = "community"
+wallpaper_scheme = "m3-tonal-spot"
+
+[wallpaper.default]
+path = "/usr/share/noctalia/assets/noctalia-wallpaper.png"
+
+[wallpaper.last]
+path = "/usr/share/noctalia/assets/noctalia-wallpaper.png"
+
+[weather]
+unit = "imperial"
+
+[widget.active_window]
+max_length = 180
+title_scroll = "on_hover"
+
+[widget.battery]
+display_mode = "graphic"
+
+[widget.clock]
+color = "primary"
+scale = 0.90000000000000002
+
+[widget.media]
+max_length = 190
+title_scroll = "always"
+
+[widget.network]
+color = "primary"
+
+[widget.spacer_1]
+length = 10
+
+[widget.spacer_2]
+enabled = true
+length = 10
+type = "spacer"
+
+[widget.sysmon_2]
+show_value = true
+
+[widget.sysmon_3]
+visualization = "graph"
+
+[widget.temp]
+show_value = true
+
+[widget.tray]
+scale = 1.0
+
+[widget.volume]
+color = "primary"
+
+[widget.workspaces]
+empty_color = "on_surface_variant"
+show_labels = true
+style = "minimal"
+>>>>>>> main

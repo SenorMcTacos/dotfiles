@@ -1,0 +1,40 @@
+return {
+  {
+    "habamax/vim-godot",
+    init = function()
+      vim.g.godot_executable = "godot"
+    end,
+  },
+  { "skywind3000/asyncrun.vim" },
+  { "teatek/gdscript-extended-lsp.nvim", opts = { view_type = "floating", picker = "snacks" } },
+  {
+    "folke/snacks.nvim",
+    opts = {
+      picker = {
+        sources = {
+          explorer = {
+            hidden = true, -- show hidden files
+            ignored = false, -- don't show gitignored files
+            exclude = { -- exclude specific patterns
+              "*.uid", -- glob pattern for files ending with .uid
+              "server.pipe", -- exact filename match
+            },
+          },
+        },
+      },
+    },
+  },
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        gdscript = {
+          name = "godot",
+          cmd = vim.lsp.rpc.connect("127.0.0.1", 6005),
+          filetypes = { "gdscript" },
+          root_markers = { "project.godot", ".git" },
+        },
+      },
+    },
+  },
+}
