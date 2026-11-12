@@ -25,6 +25,7 @@ hl.monitor({
 hl.monitor({
 	output = "eDP-1",
 	mode = "3200x2000@120",
+	-- mode = "1920x1080@60",
 	position = "0x0",
 	scale = 2,
 })
@@ -36,3 +37,10 @@ hl.monitor({
 	position = "auto-up",
 	scale = "auto",
 })
+
+--hl.monitor({
+--	output = "DP-11",
+--	mode = "3840x2160@60",
+--	position = "auto-up",
+--	scale = 2,
+--})

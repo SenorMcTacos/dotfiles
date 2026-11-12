@@ -7,3 +7,4 @@ local opt = vim.opt
 opt.expandtab = true
 opt.shiftwidth = 4
 opt.tabstop = 4
+vim.g.lazyvim_python_lsp = "pyright"
