@@ -1,11 +1,5 @@
 config_version = 16
 
-<<<<<<< HEAD
-[lockscreen_widgets]
-enabled = false
-schema_version = 2
-widget_order = [ "lockscreen-login-box@eDP-1" ]
-=======
 [bar.default]
 capsule = false
 center = [ "spacer_2", "workspaces", "spacer_1", "active_window" ]
@@ -95,20 +89,12 @@ widget_order = [
     "lockscreen-login-box@HDMI-A-1",
     "lockscreen-login-box@eDP-1"
 ]
->>>>>>> main
 
     [lockscreen_widgets.grid]
     cell_size = 16
     major_interval = 4
     visible = true
 
-<<<<<<< HEAD
-    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
-    box_height = 196.0
-    box_width = 810.0
-    cx = 800.0
-    cy = 818.0
-=======
     [lockscreen_widgets.widget."lockscreen-login-box@DP-10"]
     box_height = 196.0
     box_width = 810.0
@@ -282,7 +268,6 @@ widget_order = [
     box_width = 810.0
     cx = 800.00006103515625
     cy = 818.00006103515625
->>>>>>> main
     output = "eDP-1"
     placement_height = 1000.0
     placement_width = 1600.0
@@ -304,9 +289,6 @@ widget_order = [
         show_password_reveal = true
         show_session_buttons = true
         show_unlock_hint = true
-<<<<<<< HEAD
-        show_weather = true
-=======
         show_weather = true
 
 [shell]
@@ -373,4 +355,3 @@ color = "primary"
 empty_color = "on_surface_variant"
 show_labels = true
 style = "minimal"
->>>>>>> main
