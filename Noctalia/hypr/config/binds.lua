@@ -1,5 +1,5 @@
 local mainMod = "SUPER"
-local altMod = "CTRL + ALT" -- Laptop version
+local altMod = "ALT + SUPER" -- This will differ from pc to laptop to not cause interference
 local noctCall = "noctalia msg "
 local launchPrefix = "uwsm app -- " -- if you are not using UWSM, make this empty (e.g. "")
 
