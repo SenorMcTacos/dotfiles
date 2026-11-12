@@ -1,0 +1,21 @@
+[Desktop Entry]
+
+# The type as listed above
+Type=Application
+# The version of the desktop entry specification to which this file conforms
+Version=1.0.0
+# The name of the application
+Name=Chart Forge
+# A comment which can/will be used as a tooltip
+Comment=Chart Forge Rhythm Game Mapper
+# The path to the folder in which the executable is run
+Path=/home/senortaco/Things/ChartForge/
+# The executable of the application, possibly with arguments.
+Exec=uwsm app -- ./chartforgev1.6.0.AppImage
+# The name of the icon that will be used to display this entry
+Icon=/home/senortaco/Things/ChartForge/ChartForge_logo.png
+# Describes whether this application needs to be run in a terminal or not
+Terminal=false
+# Describes the categories in which this entry should be shown
+Categories=Game;Development;
+
