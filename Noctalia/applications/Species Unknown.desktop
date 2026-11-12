@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Species: Unknown
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/2747330
+Icon=steam_icon_2747330
+Terminal=false
+Type=Application
+Categories=Game;

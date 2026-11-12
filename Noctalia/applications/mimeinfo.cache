@@ -1,0 +1,22 @@
+[MIME Cache]
+application/microsoftpatch=wine-extension-msp.desktop;
+application/pkix-cert=wine-extension-crt.desktop;
+application/prs.wavefront-obj=io.github.crealityofficial.CrealityPrint.desktop;
+application/vnd.ms-3mfdocument=io.github.crealityofficial.CrealityPrint.desktop;
+application/vnd.ms-htmlhelp=wine-extension-chm.desktop;
+application/winhlp=wine-extension-hlp.desktop;
+application/x-amf=io.github.crealityofficial.CrealityPrint.desktop;
+application/x-keepass2=org.keepassxc.KeePassXC.desktop;
+model/3mf=io.github.crealityofficial.CrealityPrint.desktop;
+model/stl=io.github.crealityofficial.CrealityPrint.desktop;
+text/vbscript=wine-extension-vbs.desktop;
+text/x-ms-regedit=wine-extension-reg.desktop;
+x-scheme-handler/Blizzard.URI.Battlenet=wine-protocol-Blizzard.URI.Battlenet.desktop;
+x-scheme-handler/Blizzard.URI.Blizzard=wine-protocol-Blizzard.URI.Blizzard.desktop;
+x-scheme-handler/Blizzard.URI.Heroes=wine-protocol-Blizzard.URI.Heroes.desktop;
+x-scheme-handler/Blizzard.URI.SC2=wine-protocol-Blizzard.URI.SC2.desktop;
+x-scheme-handler/battlenet=wine-protocol-battlenet.desktop;
+x-scheme-handler/blizzard=wine-protocol-blizzard.desktop;
+x-scheme-handler/crealityprintlink=io.github.crealityofficial.CrealityPrint.desktop;
+x-scheme-handler/heroes=wine-protocol-heroes.desktop;
+x-scheme-handler/starcraft=wine-protocol-starcraft.desktop;

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Battle․net
+MimeType=x-scheme-handler/Blizzard.URI.Blizzard;
+Exec=env "WINEPREFIX=/home/senortaco/.wine" wine start %u
+NoDisplay=true
+StartupNotify=true
+Icon=E88A_Battle.net.0

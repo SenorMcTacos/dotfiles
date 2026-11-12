@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Knockout City - Private Server Edition
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/2915930
+Icon=steam_icon_2915930
+Terminal=false
+Type=Application
+Categories=Game;

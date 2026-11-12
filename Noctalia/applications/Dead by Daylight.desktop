@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Dead by Daylight
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/381210
+Icon=steam_icon_381210
+Terminal=false
+Type=Application
+Categories=Game;
